@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @file_record.title %>
+</p>
+<hr>
+
+Steps
+<br>
+
+
+ <% @file_record.Steps.each do |step| %>
+   Office name:
+   <%= step.office.name %>
+   <br>
+ <% end %>
+
+<hr>
+
+
+
+<br>
+Add Step <br>
+<%=
+render '/steps/addstep'
+%>
+<br>
+<%= link_to 'Edit', edit_file_record_path(@file_record) %> |
+<%= link_to 'Back', file_records_path %>
