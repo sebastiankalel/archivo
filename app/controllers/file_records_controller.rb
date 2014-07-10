@@ -29,15 +29,14 @@ class FileRecordsController < ApplicationController
     @file_record = FileRecord.new(file_record_params)
 
    
-
-
-   # @step=Step.new(@file_record.id,0,1)
-
-
     respond_to do |format|
       if @file_record.save
-        @step = Step.create({file_record_id:@file_record.id,person_id:0,office_id:1})
-        @step.save
+        
+     #   @file_record.save_step
+
+     #  @step = Step.create({file_record_id:@file_record.id,person_id:0,office_id:1})
+     #  @step.save
+
         format.html { redirect_to @file_record, notice: 'File record was successfully created.' }
         format.json { render :show, status: :created, location: @file_record }
       else
