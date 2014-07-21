@@ -16,4 +16,10 @@ def self.archivate
    step
 end
 
+def first_step
+   office_id=Office.get("Archivo").id
+#   self.office=Office.start_office
+   save 
+end
+
 end

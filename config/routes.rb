@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
   resources :file_records
 
+
+ # resources :file_records do
+ #   resources: steps
+ # end
 #  get 'welcome/index'
 
 #  root :to => "welcome#index"

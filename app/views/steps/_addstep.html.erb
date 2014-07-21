@@ -1,3 +1,9 @@
+<!--
+form_for @file_record.steps.build
+form_for @file_record, @step
+
+f.assoc
+-->
 <%= form_for(@step) do |f| %>
   <% if @step.errors.any? %>
     <div id="error_explanation">

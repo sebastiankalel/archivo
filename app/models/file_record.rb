@@ -17,4 +17,11 @@ class FileRecord < ActiveRecord::Base
       step.save
    end
 
+   def first_file_record
+   	steps<<Step.create.first_step
+   	#build o create
+   end
+
+
+
 end
