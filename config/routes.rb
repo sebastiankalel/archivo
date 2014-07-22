@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :file_records
 
+  root to: "file_records#index"
 
  # resources :file_records do
  #   resources: steps

@@ -1,3 +1,6 @@
+<%= current_user.email   %>
+<%= link_to 'Log Out', destroy_user_session_path , :method => :delete %>
+<hr>
 <h1>Listing file_records</h1>
 
 <table>
@@ -23,3 +26,4 @@
 <br>
 
 <%= link_to 'New File record', new_file_record_path %>
+
