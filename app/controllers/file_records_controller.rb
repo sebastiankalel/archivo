@@ -1,4 +1,4 @@
-class FileRecordsController < ApplicationController
+class FileRecordsController < InheritedResources::Base
   before_action :set_file_record, only: [:show, :edit, :update, :destroy]
 
   # GET /file_records

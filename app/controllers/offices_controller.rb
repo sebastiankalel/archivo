@@ -1,4 +1,4 @@
-class OfficesController < ApplicationController
+class OfficesController < InheritedResources::Base
   before_action :set_office, only: [:show, :edit, :update, :destroy]
 
   # GET /offices

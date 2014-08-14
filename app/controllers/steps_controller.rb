@@ -1,4 +1,4 @@
-class StepsController < ApplicationController
+class StepsController < InheritedResources::Base
   before_action :set_step, only: [:show, :edit, :update, :destroy]
 
   # GET /steps

@@ -1,9 +1,12 @@
 require 'test_helper'
 
 class FileRecordsControllerTest < ActionController::TestCase
+
+
+
   setup do
     @file_record = file_records(:one)
-  end
+     end
 
   test "should get index" do
     get :index
