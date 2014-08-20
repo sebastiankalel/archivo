@@ -26,15 +26,23 @@ class StepsController < InheritedResources::Base
   def create
     @step = Step.new(step_params)
 
-    respond_to do |format|
+   respond_to do |format|
       if @step.save
-        format.html { redirect_to @step, notice: 'Step was successfully created.' }
-        format.json { render :show, status: :created, location: @step }
+
+        if @step.person.completed?
+          format.html { redirect_to file_record_path(@step.file_record.id), notice: 'Step was successfully created.' }
+        else
+          format.html { redirect_to edit_person_path(@step.person.id), notice: 'La persona debe estar completa.' }
+        end
       else
         format.html { render :new }
-        format.json { render json: @step.errors, status: :unprocessable_entity }
       end
+
+
     end
+
+    
+
   end
 
   # PATCH/PUT /steps/1
@@ -69,6 +77,6 @@ class StepsController < InheritedResources::Base
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def step_params
-      params.require(:step).permit(:file_record_id, :person_id, :office_id)
+      params.require(:step).permit(:file_record_id, :person_id, :office_id, :email)
     end
 end

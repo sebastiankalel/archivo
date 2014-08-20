@@ -1,6 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  dni: MyString
+completo:
+  name: 'Juan'
+  dni: 'dniCompleto'
+  email: 'qwe@qwe.com'
+
+incompleto:
+  name: 'Jose'
+  email: 'ads@asd.com'
+  
+conmail:
+  email: 'qwe@qwe.com'
 

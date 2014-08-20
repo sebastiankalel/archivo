@@ -22,6 +22,6 @@ class ActionController::TestCase
 
 
 	setup do
-	  sign_in User.create(email:'qwe@qwe.com',password:'test1234')
+	  sign_in users(:one)
 	end
 end
