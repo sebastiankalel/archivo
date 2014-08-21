@@ -2,12 +2,12 @@
 
 completo:
   name: 'Juan'
-  dni: 'dniCompleto'
+  dni: '12345678'
   email: 'qwe@qwe.com'
 
 incompleto:
   name: 'Jose'
-  email: 'ads@asd.com'
+  email: 'qwe@qwe.com'
   
 conmail:
   email: 'qwe@qwe.com'
