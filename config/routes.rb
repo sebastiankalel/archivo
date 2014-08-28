@@ -7,9 +7,15 @@ Rails.application.routes.draw do
 
   resources :offices
 
-  resources :file_records
+  resources :file_records do
+    collection do
+      get :search
+    end 
+  end
 
   root to: "file_records#index"
+
+  
 
  # resources :file_records do
  #   resources: steps

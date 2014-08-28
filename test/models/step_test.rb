@@ -8,9 +8,15 @@ class StepTest < ActiveSupport::TestCase
     assert step.person.email == 'qwe@qwe.com'
   end
 
-
-
  # test "si no es el ultimo" do
+    
+ #   step=steps(:paso3)
+ #   delete :destroy, id: steps(:paso3).id
+ #   assert step.file_record.steps.count==3
+
+#  end
+
+ # test "si no es el ultimo" do-
 
   #  step=steps(:entrada)
 
@@ -20,7 +26,6 @@ class StepTest < ActiveSupport::TestCase
 
   #  delete, :destroy, id:steps(:).id
 
-  
-  #end 
+    #end 
   
 end

@@ -1,10 +1,23 @@
 class FileRecordsController < InheritedResources::Base
   before_action :set_file_record, only: [:show, :edit, :update, :destroy]
 
+ # def search(buscar)
+ #   search()
+ #   file_records=FileRecord.all
+#  end
+
   # GET /file_records
   # GET /file_records.json
   def index
-    @file_records = FileRecord.all
+  #  @file_records = FileRecord.all
+
+    if params[:search]
+        @file_records = FileRecord.search(params[:search]).order("created_at DESC")
+        @titlemessage="Search title:"+params[:search]+" in File Records"
+      else
+        @file_records = FileRecord.all.order('created_at DESC')
+        @titlemessage="Listing all File Records"
+      end
   end
 
   # GET /file_records/1

@@ -22,6 +22,10 @@ class FileRecord < ActiveRecord::Base
    	#build o create
    end
 
+   def self.search(query)
+     where("title like ?", "%#{query}%") 
+   end
+
 
 
 end
